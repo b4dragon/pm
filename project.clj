@@ -6,7 +6,8 @@
   :dependencies [[org.clojure/clojure "1.10.0"]
                  [aleph "0.4.6"]
                  [com.cognitect/transit-clj "0.8.313"]
-                 [com.taoensso/timbre "4.10.0"]]
-                 
+                 [com.taoensso/timbre "4.10.0"]
+                 [org.clojure/core.async "0.4.490"]
+                 [org.clojure/data.json "0.2.6"]]
 
   :repl-options {:init-ns pm.core})

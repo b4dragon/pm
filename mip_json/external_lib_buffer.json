@@ -1,0 +1,7 @@
+[
+    {
+        "name": "external_lib_buffer",
+        "lsb_addr": "0xA0",
+        "structure": []
+    }
+]

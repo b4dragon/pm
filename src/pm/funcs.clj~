@@ -1,0 +1,94 @@
+(ns pm.funcs)
+
+
+;; packet-to-am
+;;["read" size subaddr]
+;;["write" ... tbd
+
+(defn make-packet-to-am
+  "make a packet to am
+  return: read+=size+=subaddr"
+  [v]
+  (->> v
+       (interpose "-+")
+       (apply str)))
+
+;;init
+;;read
+;;MIP_ADDR_INFO_INTERFACE
+;;MIP_ADDR_INFO_VERSION
+;;MIP_ADDR_INFO_SECTION_ADDR
+;;MIP_ADDR_INFO_INTEGRITY
+;;MIP_ADDR_INFO_EXTRA
+;;MIP_ADDR_CONFIDENTIAL_INFO
+;;MIP_ADDR_INFO_PANEL
+;;MIP_ADDR_CTRL_SETTER
+;;MIP_ADDR_EVENT_FORMAT
+;;MIP_ADDR_IMAGE_INFO
+;;MIP_ADDR_IMAGE_CONTROL
+;;MIP_ADDR_LOG_INFO
+;;MIP_ADDR_LOG_CONTROL
+;;MIP_ADDR_CUSTOM_PROTOCOL_INFO
+
+;;status
+
+(defn init
+  []
+  
+  )
+
+(defn read
+  [ch-to-am ch-from-am sub-addr]
+  (let [size (get-subaddr-size sub-addr)
+        packet (make-packet-to-am ["read" size sub-addr])]
+    (>!! ch-to-ma packet)
+    (loop [] 
+      (when-let [rsp (<!! ch-from-am)]
+        rsp)
+      (recur))))
+
+;;read image 
+
+
+
+(defn read-image []
+  ;;read
+  ;;MIP_ADDR_IMAGE_DATA_FORMAT
+  ;;MIP_ADDR_IMAGE_FINGER_NUM
+  ;;MIP_ADDR_IMAGE_FINGER_AREA
+  ;;read image scalar or matrix  - MIP_ADDR_GENERAL_BUFFER
+  
+  (set-image-type :IT-NONE)
+  )
+
+(defn read-log []
+  ;;read
+  ;;MIP_ADDR_LOG_DATA_FORMAT
+  ;;0x6000
+  ;;check "---"
+  ;;?? - extended_log_flags
+  ;;read-log
+  ;;read - 0x2000 - scalar or matrix
+  ;;
+  )
+
+(defn check-trig []
+  )
+
+
+(defn loop []
+  (check-trig)
+      )
+
+
+
+
+(defn from-ui-to-am [item]
+  (let [filtered nil]
+    filtered))
+
+(defn from-am-to-ui [item]
+  (let [filtered nil]
+    filtered))
+
+                     

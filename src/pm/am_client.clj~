@@ -1,0 +1,20 @@
+(ns pm.am-client
+  (:require [aleph.http :as http]
+            [clojure.core.async :refer :all]))
+
+
+(def server-addr "ws://0.0.0.0:8080")
+(def ws @(http/websocket-client server-addr))
+
+(defn connect-server
+  []
+  
+  (let [ws @(http/websocket-client server-addr)
+        input (chan)
+        output (chan)]
+    (loop []
+      (when-let [cmd (<! input)]
+        (@s/put! ws cmd)
+
+      (recur)
+    

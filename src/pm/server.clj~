@@ -1,0 +1,24 @@
+(ns pm.server
+  (:require [aleph.http :as http]
+            [manifold.stream :as s]
+            [cognitect.transit :as t]))
+
+(def non-websocket-request
+  {:status 400
+   :headers {"content-type" "application/text"}
+   :body "Expected a websocket request."})
+
+(defn echo-handler
+  "This handler sets up a websocket connection, and then proceeds to echo back every message
+   it receives from the client.  The value yielded by `websocket-connection` is a **duplex
+   stream**, which represents communication to and from the client.  Therefore, all we need to
+   do in order to echo the messages is connect the stream to itself.
+   Since any request it gets may not be a valid handshake for a websocket request, we need to
+   handle that case appropriately."
+  [req]
+  (if-let [socket (try
+                    @(http/websocket-connection req)
+                    (catch Exception e
+                      nil))]
+    (s/connect socket socket)
+    non-websocket-request))

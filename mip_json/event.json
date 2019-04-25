@@ -1,0 +1,44 @@
+[
+  {
+    "name": "event_format",
+    "lsb_addr": "0x00",
+    "structure": [
+      {
+        "name": "RESERVED_0",
+        "lsb_addr": "0x00",
+        "type": "uint32_t",
+        "size": 1
+      },
+      {
+        "name": "mip_packet_format_id",
+        "lsb_addr": "0x04",
+        "type": "enum mip_packet_format_id",
+        "size": 1
+      },
+      {
+        "name": "size",
+        "lsb_addr": "0x06",
+        "type": "uint8_t",
+        "size": 1
+      }
+    ]
+  },
+  {
+    "name": "event_packet_info",
+    "lsb_addr": "0x10",
+    "structure": [
+      {
+        "name": "info",
+        "lsb_addr": "0x10",
+        "type": "struct mip_packet_info",
+        "size": "*"
+      },
+      {
+        "name": "content",
+        "lsb_addr": "0x11",
+        "type": "uint8_t",
+        "size": "*"
+      }
+    ]
+  }
+]

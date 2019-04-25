@@ -1,0 +1,168 @@
+[
+    {
+        "name": "ctrl_getter",
+        "lsb_addr": "0x00",
+        "structure": [
+            {
+                "name": "stat",
+                "lsb_addr": "0x00",
+                "type": "enum mip_control_ready_status",
+                "size": 1
+            },
+            {
+                "name": "evt_ready",
+                "lsb_addr": "0x01",
+                "type": "bool",
+                "size": 1
+            }
+        ]
+    }
+    {
+        "name": "ctrl_setter",
+        "lsb_addr": "0x10",
+        "structure": [
+            {
+                "name": "mode",
+                "lsb_addr": "0x10",
+                "type": "enum mip_control_mode",
+                "size": 1
+            },
+            {
+                "name": "ett",
+                "lsb_addr": "0x01",
+                "type": "enum mip_control_trigger_type",
+                "size": 1
+            },
+            {
+                "name": "rebase",
+                "lsb_addr": "0x02",
+                "type": "bool",
+                "size": 1
+            }
+        ]
+    }
+    {
+        "name": "ctrl_dependency-setter",
+        "lsb_addr": "0x14",
+        "structure": [
+            {
+                "name": "gesture_type",
+                "lsb_addr": "0x14",
+                "type": "uint32_t",
+                "size": 1
+            },
+            {
+                "name": "reserved_0",
+                "lsb_addr": "0x18",
+                "type": "bool",
+                "size": 1
+            },
+            {
+                "name": "charget_attached",
+                "lsb_addr": "0x19",
+                "type": "bool",
+                "size": 1
+            },
+            {
+                "name": "high_sens",
+                "lsb_addr": "0x1A",
+                "type": "bool",
+                "size": 1
+            },
+            {
+                "name": "reserved_1",
+                "lsb_addr": "0x1B",
+                "type": "bool",
+                "size": 1
+            },
+            {
+                "name": "reserved_2",
+                "lsb_addr": "0x1C",
+                "type": "bool",
+                "size": 1
+            },
+            {
+                "name": "edge_correct",
+                "lsb_addr": "0x1D",
+                "type": "bool",
+                "size": 1
+            },
+            {
+                "name": "is_glover",
+                "lsb_addr": "0x1E",
+                "type": "bool",
+                "size": 1
+            },
+            {
+                "name": "reserved_3",
+                "lsb_addr": "0x1F",
+                "type": "bool",
+                "size": 4
+            },
+            {
+                "name": "proximity_sens",
+                "lsb_addr": "0x23",
+                "type": "bool",
+                "size": 1
+            },
+            {
+                "name": "reserved_4",
+                "lsb_addr": "0x24",
+                "type": "bool",
+                "size": 2
+            },
+            {
+                "name": "scr_en",
+                "lsb_addr": "0x26",
+                "type": "bool",
+                "size": 1
+            },
+            {
+                "name": "key_end",
+                "lsb_addr": "0x27",
+                "type": "bool",
+                "size": 1
+            },
+            {
+                "name": "reserved_5",
+                "lsb_addr": "0x28",
+                "type": "bool",
+                "size": 2
+            },
+            {
+                "name": "is_run",
+                "lsb_addr": "0x2A",
+                "type": "bool",
+                "size": 1
+            },
+            {
+                "name": "touch_sensitivity_measurement_en",
+                "lsb_addr": "0x2B",
+                "type": "bool",
+                "size": 1
+            },
+            {
+                "name": "not-finish",
+                "lsb_addr": "0x2C",
+                "type": "bool",
+                "size": 1
+            },
+        ]
+    }
+    {
+        "name": "ctrl_info",
+        "lsb_addr": "0x30",
+        "structure": [
+            {
+                "name": "ptc_id",
+                "lsb_addr": "0x00",
+                "type": "uint16_t",
+                "size": 44
+            },
+        ]
+    }
+
+
+
+
+]

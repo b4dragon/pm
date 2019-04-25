@@ -1,0 +1,7 @@
+[
+    {
+        "name": "parameter_buffer",
+        "lsb_addr": "0x60",
+        "structure": []
+    }
+]

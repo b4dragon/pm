@@ -1,0 +1,314 @@
+[
+  {
+    "name": "panel_information",
+    "lsb_addr": "0x00",
+    "structure": [
+      {
+        "name": "product_name",
+        "lsb_addr": "0x00",
+        "type": "char",
+        "size": 16
+      },
+      {
+        "name": "",
+        "lsb_addr": "0x10",
+        "type": "uint16_t",
+        "size": 1
+      },
+      {
+        "name": "y_res",
+        "lsb_addr": "0x12",
+        "type": "uint16_t",
+        "size": 1
+      },
+      {
+        "name": "x_grid_num",
+        "lsb_addr": "0x14",
+        "type": "uint8_t",
+        "size": 1
+      },
+      {
+        "name": "y_grid_num",
+        "lsb_addr": "0x15",
+        "type": "uint8_t",
+        "size": 1
+      },
+      {
+        "name": "key_num",
+        "lsb_addr": "0x16",
+        "type": "uint8_t",
+        "size": 1
+      },
+      {
+        "name": "pressure_sensor_num",
+        "lsb_addr": "0x17",
+        "type": "uint8_t",
+        "size": 1
+      },
+      {
+        "name": "panel_x_size_dmm",
+        "lsb_addr": "0x18",
+        "type": "uint16_t",
+        "size": 1
+      },
+      {
+        "name": "panel_y_size_dmm",
+        "lsb_addr": "0x1A",
+        "type": "uint16_t",
+        "size": 1
+      },
+      {
+        "name": "x_pixel_per_mm",
+        "lsb_addr": "0x1C",
+        "type": "uint8_t",
+        "size": 1
+      },
+      {
+        "name": "y_pixel_per_mm",
+        "lsb_addr": "0x1E",
+        "type": "uint8_t",
+        "size": 1
+      }
+    ]
+  },
+  {
+    "name": "firmware_version",
+    "lsb_addr": "0x20",
+    "structure": [
+      {
+        "name": "boot_major_ver",
+        "lsb_addr": "0x20",
+        "type": "uint8_t",
+        "size": 1
+      },
+      {
+        "name": "boot_minor_ver",
+        "lsb_addr": "0x21",
+        "type": "uint8_t",
+        "size": 1
+      },
+      {
+        "name": "core_major_ver",
+        "lsb_addr": "0x22",
+        "type": "uint8_t",
+        "size": 1
+      },
+      {
+        "name": "core_minor_ver",
+        "lsb_addr": "0x23",
+        "type": "uint8_t",
+        "size": 1
+      },
+      {
+        "name": "ic_name_ver",
+        "lsb_addr": "0x24",
+        "type": "uint8_t",
+        "size": 1
+      },
+      {
+        "name": "project_ver",
+        "lsb_addr": "0x25",
+        "type": "uint8_t",
+        "size": 1
+      },
+      {
+        "name": "module_ver",
+        "lsb_addr": "0x26",
+        "type": "uint8_t",
+        "size": 1
+      },
+      {
+        "name": "fw_release_ver",
+        "lsb_addr": "0x27",
+        "type": "uint8_t",
+        "size": 1
+      }
+    ]
+  },
+  {
+    "name": "firmware_section_address",
+    "lsb_addr": "0x30",
+    "structure": [
+      {
+        "name": "boot_start_addr",
+        "lsb_addr": "0x30",
+        "type": "uint8_t",
+        "size": 1
+      },
+      {
+        "name": "boot_end_addr",
+        "lsb_addr": "0x31",
+        "type": "uint8_t",
+        "size": 1
+      },
+      {
+        "name": "fw_start_addr",
+        "lsb_addr": "0x32",
+        "type": "uint8_t",
+        "size": 1
+      },
+      {
+        "name": "fw_end_addr",
+        "lsb_addr": "0x33",
+        "type": "uint8_t",
+        "size": 1
+      },
+      {
+        "name": "RESERVED_0",
+        "lsb_addr": "0x34",
+        "type": "uint8_t",
+        "size": 1
+      },
+      {
+        "name": "RESERVED_1",
+        "lsb_addr": "0x35",
+        "type": "uint8_t",
+        "size": 1
+      },
+      {
+        "name": "RESERVED_2",
+        "lsb_addr": "0x36",
+        "type": "uint8_t",
+        "size": 1
+      },
+      {
+        "name": "RESERVED_3",
+        "lsb_addr": "0x37",
+        "type": "uint8_t",
+        "size": 1
+      }
+    ]
+  },
+  {
+    "name": "firmware_integrity",
+    "lsb_addr": "0x40",
+    "structure": [
+      {
+        "name": "bcd_build_date",
+        "lsb_addr": "0x40",
+        "type": "uint32_t",
+        "size": 1
+      },
+      {
+        "name": "utc_build_time",
+        "lsb_addr": "0x44",
+        "type": "uint32_t",
+        "size": 1
+      },
+      {
+        "name": "pre_calced_checksum",
+        "lsb_addr": "0x48",
+        "type": "uint16_t",
+        "size": 1
+      },
+      {
+        "name": "real_time_checksum",
+        "lsb_addr": "0x4A",
+        "type": "uint16_t",
+        "size": 1
+      }
+    ]
+  },
+  {
+    "name": "interface",
+    "lsb_addr": "0x50",
+    "structure": [
+      {
+        "name": "ptc_name",
+        "lsb_addr": "0x50",
+        "type": "char",
+        "size": 8
+      },
+      {
+        "name": "bcd_ptc_ver",
+        "lsb_addr": "0x58",
+        "type": "uint16_t",
+        "size": 1
+      }
+    ]
+  },
+  {
+    "name": "extra",
+    "lsb_addr": "0x70",
+    "structure": [
+      {
+        "name": "ic_id",
+        "lsb_addr": "0x70",
+        "type": "uint8_t",
+        "size": 1
+      },
+      {
+        "name": "ic_name",
+        "lsb_addr": "0x71",
+        "type": "char",
+        "size": 4
+      },
+      {
+        "name": "ic_vender_id",
+        "lsb_addr": "0x75",
+        "type": "char",
+        "size": 2
+      },
+      {
+        "name": "hardware_category",
+        "lsb_addr": "0x77",
+        "type": "uint8_t",
+        "size": 1
+      },
+      {
+        "name": "screen_press_thd",
+        "lsb_addr": "0x78",
+        "type": "uint8_t",
+        "size": 1
+      },
+      {
+        "name": "RESERVED_0",
+        "lsb_addr": "0x79",
+        "type": "uint8_t",
+        "size": 1
+      },
+      {
+        "name": "key_press_thd",
+        "lsb_addr": "0x7A",
+        "type": "uint8_t",
+        "size": 1
+      },
+      {
+        "name": "RESERVED_1",
+        "lsb_addr": "0x7B",
+        "type": "uint8_t",
+        "size": 7
+      },
+      {
+        "name": "screen_release_thd",
+        "lsb_addr": "0x82",
+        "type": "uint8_t",
+        "size": 1
+      },
+      {
+        "name": "key_release_thd",
+        "lsb_addr": "0x83",
+        "type": "uint8_t",
+        "size": 1
+      },
+      {
+        "name": "RESERVED_2",
+        "lsb_addr": "0x84",
+        "type": "uint8_t",
+        "size": 9
+      },
+      {
+        "name": "table_data_origin",
+        "lsb_addr": "0x8D",
+        "type": "uint8_t",
+        "size": 1
+      },
+      {
+        "name": "proximity_thd",
+        "lsb_addr": "0x8E",
+        "type": "uint8_t",
+        "size": 1
+      }
+    ]
+  }
+]

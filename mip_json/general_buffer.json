@@ -1,0 +1,7 @@
+[
+    {
+        "name": "general_buffer",
+        "lsb_addr": "0x20",
+        "structure": []
+    }
+]

@@ -1,0 +1,26 @@
+(ns pm.read-json
+  (:require [clojure.data.json :as json]))
+
+(def msb-fname "protocol_msb")
+
+(defn make-path [fname]
+  (let [d-path "./mip_json/"
+        extention ".json"]
+    (str d-path fname extention )))
+
+(defn read-json
+  [fname]
+  (let [f-path (make-path fname)]
+    (-> f-path
+        (slurp)
+        (json/read-str :key-fn keyword))))
+
+(def msb (-> msb-fname
+             (make-path)
+             (slurp)
+             (json/read-str :key-fn keyword)))
+
+(def msb (read-json msb-fname))
+(def info (read-json (str (:msb_name (first msb)) ".json")))
+
+(first info)

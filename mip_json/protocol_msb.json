@@ -1,0 +1,42 @@
+[
+  {
+    "msb_name": "information",
+    "msb_addr": "0x01"
+  },
+  {
+    "msb_name": "event",
+    "msb_addr": "0x02"
+  },
+  {
+    "msb_name": "ctrl",
+    "msb_addr": "0x06"
+  },
+  {
+    "msb_name": "test",
+    "msb_addr": "0x0a"
+  },
+  {
+    "msb_name": "calibration",
+    "msb_addr": "0x0b"
+  },
+  {
+    "msb_name": "image",
+    "msb_addr": "0x0c"
+  },
+  {
+    "msb_name": "custom",
+    "msb_addr": "0x0e"
+  },
+  {
+    "msb_name": "general_buffer",
+    "msb_addr": "0x20"
+  },
+  {
+    "msb_name": "parameter_buffer",
+    "msb_addr": "0x60"
+  },
+  {
+    "msb_name": "external_lib_buffer",
+    "msb_addr": "0xa0"
+  }
+]

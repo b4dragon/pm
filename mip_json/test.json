@@ -1,0 +1,20 @@
+[
+    {
+        "name": "getter",
+        "lsb_addr": "0x00",
+        "structure": [
+            {
+                "name": "stat",
+                "lsb_addr": "0x00",
+                "type": "enum mip_control_ready_status",
+                "size": 1
+            },
+            {
+                "name": "evt_ready",
+                "lsb_addr": "0x01",
+                "type": "bool",
+                "size": 1
+            }
+        ]
+    }
+]

@@ -1,0 +1,1179 @@
+[{
+    "name": "mip_subsection_info",
+    "type": "struct",
+    "size": 1,
+    "value": [{
+        "name": "**data",
+        "type": "uint8_t",
+        "size": 1,
+        "value": "None"
+    }, {
+        "name": "*start_addr",
+        "type": "uint8_t",
+        "size": 1,
+        "value": "None"
+    }, {
+        "name": "*size",
+        "type": "uint16_t",
+        "size": 1,
+        "value": "None"
+    }, {
+        "name": "num",
+        "type": "int",
+        "size": 1,
+        "value": "None"
+    }]
+
+},
+ {
+     "name": "vector_id",
+     "type": "enum",
+     "size": 1,
+     "value": [{
+         "name": "VECTOR_ID_NONE",
+         "type": "enum",
+         "size": 1,
+         "value": 0
+               },
+               {
+                   "name": "VECTOR_ID_SCR_RX",
+                   "type": "enum",
+                   "size": 1,
+                   "value": 1
+               },
+               {
+                   "name": "VECTOR_ID_SCR_TX",
+                   "type": "enum",
+                   "size": 1,
+                   "value": 2
+               },
+               {
+                   "name": "VECTOR_ID_KEY_RX",
+                   "type": "enum",
+                   "size": 1,
+                   "value": 3
+               },
+               {
+                   "name": "VECTOR_ID_KEY_TX",
+                   "type": "enum",
+                   "size": 1,
+                   "value": 4
+               },
+               {
+                   "name": "VECTOR_ID_SENSOR",
+                   "type": "enum",
+                   "size": 1,
+                   "value": 5
+               },
+               {
+                   "name": "VECTOR_ID_SCR_KEY_LIMIT",
+                   "type": "enum",
+                   "size": 1,
+                   "value": 6
+               },
+               {
+                   "name": "VECTOR_ID_OPEN_RESULT",
+                   "type": "enum",
+                   "size": 1,
+                   "value": 7
+               },
+               {
+                   "name": "VECTOR_ID_OPEN_RX",
+                   "type": "enum",
+                   "size": 1,
+                   "value": 8
+               },
+               {
+                   "name": "VECTOR_ID_OPEN_TX",
+                   "type": "enum",
+                   "size": 1,
+                   "value": 8
+               },
+               {
+                   "name": "VECTOR_ID_SHORT_RESULT",
+                   "type": "enum",
+                   "size": 1,
+                   "value": 9
+               },
+               {
+                   "name": "VECTOR_ID_SHORT_RX",
+                   "type": "enum",
+                   "size": 1,
+                   "value": 10
+               },
+               {
+                   "name": "VECTOR_ID_SHORT_TX",
+                   "type": "enum",
+                   "size": 1,
+                   "value": 11
+               },
+               {
+                   "name": "VECTOR_ID_OPEN_SHORT_LIMIT",
+                   "type": "enum",
+                   "size": 1,
+                   "value": 12
+               },
+               {
+                   "name": "VECTOR_ID_LIMIT",
+                   "type": "enum",
+                   "size": 1,
+                   "value": 13
+               },
+               {
+                   "name": "VECTOR_ID_SIZE_FIX",
+                   "type": "enum",
+                   "size": 1,
+                   "value": 65534
+               }
+              ]
+ },
+ {
+     "name": "mip_data_type",
+     "type": "struct",
+     "size": 1,
+     "value": [{
+         "name": "size",
+         "type": "uint8_t",
+         "size": ":7",
+         "value": 0
+     }, {
+         "name": "sign",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": 0
+     }]
+ },
+ {
+     "name": "mip_data_option",
+     "type": "struct",
+     "size": 1,
+     "value": [{
+         "name": "deprecated",
+         "type": "uint8_t",
+         "size": ":5",
+         "value": 0
+     }, {
+         "name": "is_string",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": 0
+     }, {
+         "name": "is_bitfield",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": 0
+     }, {
+         "name": "is_rotated",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": 0
+     }]
+ },
+ {
+     "name": "mip_log_format",
+     "type": "struct",
+     "size": 1,
+     "value": [{
+         "name": "row",
+         "type": "uint8_t",
+         "size": 1,
+         "value": 0
+     }, {
+         "name": "col",
+         "type": "uint8_t",
+         "size": 1,
+         "value": 0
+     }, {
+         "name": "deprecated",
+         "type": "uint8_t",
+         "size": 1,
+         "value": 0
+     }, {
+         "name": "type",
+         "type": "struct mip_data_type",
+         "size": 1,
+         "value": 0
+     }, {
+         "name": "log_code",
+         "type": "uint8_t",
+         "size": 1,
+         "value": 0
+     }, {
+         "name": "opt",
+         "type": "struct mip_data_option",
+         "size": 1,
+         "value": 0
+     }, {
+         "name": "right_shift",
+         "type": "uint8_t",
+         "size": 1,
+         "value": 0
+     }, {
+         "name": "string_length",
+         "type": "uint8_t",
+         "size": 1,
+         "value": 0
+     }]
+ },
+ {
+     "name": "mip_packet_format_id",
+     "type": "enum",
+     "size": 1,
+     "value": [{
+         "name": "PF_NORMAL",
+         "type": "enum",
+         "size": 1,
+         "value": 0
+     },
+               {
+                   "name": "PF_WITH_FINGER_RECT",
+                   "type": "enum",
+                   "size": 1,
+                   "value": 1
+               },
+               {
+                   "name": "PF_FORMAT_ID_02",
+                   "type": "enum",
+                   "size": 1,
+                   "value": 2
+               },
+               {
+                   "name": "PF_FORMAT_ID_03",
+                   "type": "enum",
+                   "size": 1,
+                   "value": 3
+               },
+               {
+                   "name": "PF_KEY_ONLY",
+                   "type": "enum",
+                   "size": 1,
+                   "value": 4
+               },
+               {
+                   "name": "PF_NORMAL_2BYTE_STR",
+                   "type": "enum",
+                   "size": 1,
+                   "value": 5
+               },
+               {
+                   "name": "PF_WITH_FINGER_RECT_2BYTE_STR",
+                   "type": "enum",
+                   "size": 1,
+                   "value": 6
+               },
+               {
+                   "name": "PF_FORMAT_ID_02_2BYTE_STR",
+                   "type": "enum",
+                   "size": 1,
+                   "value": 7
+               },
+               {
+                   "name": "PF_FORMAT_ID_03_2BYTE_STR",
+                   "type": "enum",
+                   "size": 1,
+                   "value": 8
+               },
+               {
+                   "name": "PF_KEY_ONLY_2BYTE_STR",
+                   "type": "enum",
+                   "size": 1,
+                   "value": 9
+               },
+               {
+                   "name": "PF_LIMIT",
+                   "type": "enum",
+                   "size": 1,
+                   "value": 11
+               },
+               {
+                   "name": "PF_FOR_SIZEFIX",
+                   "type": "enum",
+                   "size": 1,
+                   "value": 65535
+               }
+              ]
+ },
+ {
+     "name": "mip_control_ready_status",
+     "type": "enum",
+     "size": 1,
+     "value": [{
+         "name": "RS_READY",
+         "type": "enum",
+         "size": 1,
+         "value": "0xA0"
+     }, {
+         "name": "RS_NONE",
+         "type": "enum",
+         "size": 1,
+         "value": "0x05"
+     }, {
+         "name": "RS_LOG",
+         "type": "enum",
+         "size": 1,
+         "value": "0x77"
+     }]
+ },
+ {
+     "name": "vector_elem",
+     "type": "struct",
+     "size": 1,
+     "value": [{
+         "name": "id",
+         "type": "enum vector_id",
+         "size": 1,
+         "value": "None"
+     }, {
+         "name": "num",
+         "type": "uint16_t",
+         "size": 1,
+         "value": 0
+     }]
+
+ },
+ {
+     "name": "mip_vector",
+     "type": "struct",
+     "size": 1,
+     "value": [{
+         "name": "vector_num",
+         "type": "uint8_t",
+         "size": 1,
+         "value": 0
+     }, {
+         "name": "reserved",
+         "type": "uint8_t",
+         "size": 1,
+         "value": 1
+     }, {
+         "name": "elem",
+         "type": "struct vector_elem",
+         "size": "VECTOR_ID_LIMIT",
+         "value": 1
+     }]
+ },
+ {
+     "name": "mip_data_format",
+     "type": "struct",
+     "size": 1,
+     "value": [{
+         "name": "row",
+         "type": "uint8_t",
+         "size": 1,
+         "value": 0
+     }, {
+         "name": "col",
+         "type": "uint8_t",
+         "size": 1,
+         "value": 1
+     }, {
+         "name": "is_rotated",
+         "type": "bool",
+         "size": 1,
+         "value": 1
+     }, {
+         "name": "key_num",
+         "type": "uint8_t",
+         "size": 1,
+         "value": 1
+     }, {
+         "name": "type",
+         "type": "struct mip_data_type",
+         "size": 1,
+         "value": 1
+     }, {
+         "name": "vector",
+         "type": "struct mip_vector",
+         "size": 1,
+         "value": 1
+     }]
+ },
+ {
+     "name": "mip_control_mode",
+     "type": "enum",
+     "size" : 1,
+     "value": [{
+	 "name": "MODE_TOUCH_SENSING",
+	 "type": "enum",
+	 "size":1,
+	 "value": 0,
+     }, {
+	 "name": "MODE_PARAMETER",
+	 "type": "enum",
+	 "size":1,
+	 "value": 1,
+     }, {
+	 "name": "MODE_TEST",
+	 "type": "enum",
+	 "size":1,
+	 "value": 2,
+     }]
+ }
+ {
+     "name": "mip_control_trigger_type",
+     "type": "enum",
+     "size" : 1,
+     "value": [{
+	 "name": "ETT_NONE",
+	 "type": "enum",
+	 "size":1,
+	 "value": 0,
+     }, {
+	 "name": "ETT_INTERRUPT",
+	 "type": "enum",
+	 "size":1,
+	 "value": 1,
+     }, {
+	 "name": "ETT_REGISTER",
+	 "type": "enum",
+	 "size":1,
+	 "value": 2,
+     }]
+ },
+ {
+     "name": "mip_log_triger",
+     "type": "enum",
+     "size": 1,
+     "value": [{
+         "name": "LTR_NONE",
+         "type": "enum",
+         "size": 1,
+         "value": 0
+     }, {
+         "name": "LTR_TRIG",
+         "type": "enum",
+         "size": 1,
+         "value": 1
+     }, {
+         "name": "LTR_WAIT",
+         "type": "enum",
+         "size": 1,
+         "value": 255
+     }]
+ },
+ {
+     "name": "mip_log_control",
+     "type": "struct",
+     "size": 1,
+     "value": [{
+         "name": "type",
+         "type": "uint32_t",
+         "size": 1,
+         "value": 0
+     }, {
+         "name": "trig",
+         "type": "volatile enum mip_log_triger",
+         "size": 1,
+         "value": 0
+     }, {
+         "name": "extended_log_flags",
+         "type": "volatile uint32_t",
+         "size": 4,
+         "value": 0
+     }]
+ },
+ {
+     "name": "mip_log_metadata",
+     "type": "struct",
+     "size": 1,
+     "value": [{
+         "name": "line",
+         "type": "uint16_t",
+         "size": 1,
+         "value": 0
+     }, {
+         "name": "filename",
+         "type": "char",
+         "size": 30,
+         "value": 0
+     }, {
+         "name": "key",
+         "type": "char",
+         "size": 223,
+         "value": 0
+     }]
+ }
+ 
+ {
+     "name": "mip_packet_info",
+     "type": "struct",
+     "size": 1,
+     "value": [{
+         "name": "len",
+         "type": "uint8_t",
+         "size": ":7",
+         "value": 0
+     }, {
+         "name": "alert",
+         "type": "bool",
+         "size": "1",
+         "value": 0
+     }]
+ },
+ {
+     "name": "content",
+     "type": "uint8_t",
+     "size": "13*11",
+     "value": 0
+ },
+ {
+     "name": "mip_touch_item00_1byte",
+     "type": "struct",
+     "size": 1,
+     "value": [{
+         "name": "finger_id",
+         "type": "uint8_t",
+         "size": ":4",
+         "value": null
+     }, {
+         "name": "palm",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": null
+     }, {
+         "name": "hover",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": null
+     }, {
+         "name": "screen",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": null
+     }, {
+         "name": "touch",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": null
+     }, {
+         "name": "x_msb",
+         "type": "uint8_t",
+         "size": ":4",
+         "value": null
+     }, {
+         "name": "y_msb",
+         "type": "uint8_t",
+         "size": ":4",
+         "value": null
+     }, {
+         "name": "x_lsb",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }, {
+         "name": "y_lsb",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }, {
+         "name": "strength",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }, {
+         "name": "radius",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }]
+ },
+ {
+     "name": "mip_touch_item00_2byte",
+     "type": "struct",
+     "size": 1,
+     "value": [{
+         "name": "finger_id",
+         "type": "uint8_t",
+         "size": ":4",
+         "value": null
+     }, {
+         "name": "palm",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": null
+     }, {
+         "name": "hover",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": null
+     }, {
+         "name": "screen",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": null
+     }, {
+         "name": "touch",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": null
+     }, {
+         "name": "x_msb",
+         "type": "uint8_t",
+         "size": ":4",
+         "value": null
+     }, {
+         "name": "y_msb",
+         "type": "uint8_t",
+         "size": ":4",
+         "value": null
+     }, {
+         "name": "x_lsb",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }, {
+         "name": "y_lsb",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }, {
+         "name": "strength",
+         "type": "uint16_t",
+         "size": 1,
+         "value": null
+     }, {
+         "name": "radius",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }]
+ },
+ {
+     "name": "mip_touch_item01_1byte",
+     "type": "struct",
+     "size": 1,
+     "value": [{
+         "name": "finger_id",
+         "type": "uint8_t",
+         "size": ":4",
+         "value": null
+     }, {
+         "name": "palm",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": null
+     }, {
+         "name": "hover",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": null
+     }, {
+         "name": "screen",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": null
+     }, {
+         "name": "touch",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": null
+     }, {
+         "name": "x_msb",
+         "type": "uint8_t",
+         "size": ":4",
+         "value": null
+     }, {
+         "name": "y_msb",
+         "type": "uint8_t",
+         "size": ":4",
+         "value": null
+     }, {
+         "name": "x_lsb",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }, {
+         "name": "y_lsb",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }, {
+         "name": "strength",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }, {
+         "name": "radius",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }, {
+         "name": "rect_side_max",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }, {
+         "name": "rect_side_min",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }]
+ },
+ {
+     "name": "mip_touch_item01_2byte",
+     "type": "struct",
+     "size": 1,
+     "value": [{
+         "name": "finger_id",
+         "type": "uint8_t",
+         "size": ":4",
+         "value": null
+     }, {
+         "name": "palm",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": null
+     }, {
+         "name": "hover",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": null
+     }, {
+         "name": "screen",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": null
+     }, {
+         "name": "touch",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": null
+     }, {
+         "name": "x_msb",
+         "type": "uint8_t",
+         "size": ":4",
+         "value": null
+     }, {
+         "name": "y_msb",
+         "type": "uint8_t",
+         "size": ":4",
+         "value": null
+     }, {
+         "name": "x_lsb",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }, {
+         "name": "y_lsb",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }, {
+         "name": "strength",
+         "type": "uint16_t",
+         "size": 1,
+         "value": null
+     }, {
+         "name": "radius",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }, {
+         "name": "rect_side_max",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }, {
+         "name": "rect_side_min",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }]
+ },
+ {
+     "name": "mip_touch_item02_1byte",
+     "type": "struct",
+     "size": 1,
+     "value": [{
+         "name": "finger_id",
+         "type": "uint8_t",
+         "size": ":4",
+         "value": null
+     }, {
+         "name": "palm",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": null
+     }, {
+         "name": "hover",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": null
+     }, {
+         "name": "screen",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": null
+     }, {
+         "name": "touch",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": null
+     }, {
+         "name": "x_msb",
+         "type": "uint8_t",
+         "size": ":4",
+         "value": null
+     }, {
+         "name": "y_msb",
+         "type": "uint8_t",
+         "size": ":4",
+         "value": null
+     }, {
+         "name": "x_lsb",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }, {
+         "name": "y_lsb",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }, {
+         "name": "strength",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }, {
+         "name": "radius",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }, {
+         "name": "major_len",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }, {
+         "name": "minor_len",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }]
+ },
+ {
+     "name": "mip_touch_item02_2byte",
+     "type": "struct",
+     "size": 1,
+     "value": [{
+         "name": "finger_id",
+         "type": "uint8_t",
+         "size": ":4",
+         "value": null
+     }, {
+         "name": "palm",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": null
+     }, {
+         "name": "hover",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": null
+     }, {
+         "name": "screen",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": null
+     }, {
+         "name": "touch",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": null
+     }, {
+         "name": "x_msb",
+         "type": "uint8_t",
+         "size": ":4",
+         "value": null
+     }, {
+         "name": "y_msb",
+         "type": "uint8_t",
+         "size": ":4",
+         "value": null
+     }, {
+         "name": "x_lsb",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }, {
+         "name": "y_lsb",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }, {
+         "name": "strength",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }, {
+         "name": "radius",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }, {
+         "name": "major_len",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }, {
+         "name": "minor_len",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }]
+ },
+ {
+     "name": "mip_touch_item03_1byte",
+     "type": "struct",
+     "size": 1,
+     "value": [{
+         "name": "finger_id",
+         "type": "uint8_t",
+         "size": ":4",
+         "value": null
+     }, {
+         "name": "event_type",
+         "type": "uint8_t",
+         "size": ":4",
+         "value": null
+     }, {
+         "name": "touch",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": null
+     }, {
+         "name": "palm",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": null
+     }, {
+         "name": "hover",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": null
+     }, {
+         "name": "reserved",
+         "type": "uint8_t",
+         "size": ":5",
+         "value": null
+     }, {
+         "name": "x_msb",
+         "type": "uint8_t",
+         "size": ":4",
+         "value": null
+     }, {
+         "name": "y_msb",
+         "type": "uint8_t",
+         "size": ":4",
+         "value": null
+     }, {
+         "name": "x_lsb",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }, {
+         "name": "y_lsb",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }, {
+         "name": "strength",
+         "type": "uint16_t",
+         "size": 1,
+         "value": null
+     }, {
+         "name": "radius",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }, {
+         "name": "sensor_msb",
+         "type": "uint8_t",
+         "size": ":4",
+         "value": null
+     }, {
+         "name": "sensor_stage",
+         "type": "uint8_t",
+         "size": ":4",
+         "value": null
+     }, {
+         "name": "sensor_lsb",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }, {
+         "name": "rect_side_max",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }, {
+         "name": "rect_side_min",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }]
+ },
+ {
+     "name": "mip_touch_item03_2byte",
+     "type": "struct",
+     "size": 1,
+     "value": [{
+         "name": "finger_id",
+         "type": "uint8_t",
+         "size": ":4",
+         "value": null
+     }, {
+         "name": "event_type",
+         "type": "uint8_t",
+         "size": ":4",
+         "value": null
+     }, {
+         "name": "touch",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": null
+     }, {
+         "name": "palm",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": null
+     }, {
+         "name": "hover",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": null
+     }, {
+         "name": "reserved",
+         "type": "uint8_t",
+         "size": ":5",
+         "value": null
+     }, {
+         "name": "x_msb",
+         "type": "uint8_t",
+         "size": ":4",
+         "value": null
+     }, {
+         "name": "y_msb",
+         "type": "uint8_t",
+         "size": ":4",
+         "value": null
+     }, {
+         "name": "x_lsb",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }, {
+         "name": "y_lsb",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }, {
+         "name": "strength",
+         "type": "uint16_t",
+         "size": 1,
+         "value": null
+     }, {
+         "name": "radius",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }, {
+         "name": "sensor_msb",
+         "type": "uint8_t",
+         "size": ":4",
+         "value": null
+     }, {
+         "name": "sensor_stage",
+         "type": "uint8_t",
+         "size": ":4",
+         "value": null
+     }, {
+         "name": "sensor_lsb",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }, {
+         "name": "rect_side_max",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }, {
+         "name": "rect_side_min",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }]
+ },
+ {
+     "name": "mip_touch_item04_1byte",
+     "type": "struct",
+     "size": 1,
+     "value": [{
+         "name": "finger_id",
+         "type": "uint8_t",
+         "size": ":4",
+         "value": null
+     }, {
+         "name": "palm",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": null
+     }, {
+         "name": "hover",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": null
+     }, {
+         "name": "screen",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": null
+     }, {
+         "name": "touch",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": null
+     }, {
+         "name": "strength",
+         "type": "uint8_t",
+         "size": 1,
+         "value": null
+     }]
+ },
+ {
+     "name": "mip_touch_item04_2byte",
+     "type": "struct",
+     "size": 1,
+     "value": [{
+         "name": "finger_id",
+         "type": "uint8_t",
+         "size": ":4",
+         "value": null
+     }, {
+         "name": "palm",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": null
+     }, {
+         "name": "hover",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": null
+     }, {
+         "name": "screen",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": null
+     }, {
+         "name": "touch",
+         "type": "uint8_t",
+         "size": ":1",
+         "value": null
+     }, {
+         "name": "strength",
+         "type": "uint16_t",
+         "size": 1,
+         "value": null
+     }]
+ }
+]
